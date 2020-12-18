@@ -1,0 +1,208 @@
+/*Box Shadow starts*/
+.box-a{
+    height: 40px;
+    width: 300px;
+    background-color: lightgreen;
+    border: solid 3px lime;
+    margin-bottom: 40px;
+    box-shadow: 10px 10px 5px black, inset 10px 10px 5px black;
+    /*Use the word inset to add the shadow within the box*/
+    text-align: center;
+    padding-bottom: 10px;
+}
+/*Box Shadow ends*/
+/*Rounded Box border starts*/
+.box-b{
+    height: 40px;
+    width: 300px;
+    background-color: lightgreen;
+    border: solid 3px lime;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    /*If u provide 2 values it will b for top-left bottom-right
+    corners and top-right bottom-left corners respectively*/
+    /*If u provide 4 values it will b for the respective 
+    corner borders going clockwise starting with top-left corner*/
+    /*If u provide two values diff by a slash(/) the first value
+    will be regarded as the horizontal roundnig and second one 
+    as the vertical roundig which is known as eleptical rounding*/
+}
+.box-c{
+    text-align: center;
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    margin-bottom: 40px;
+    border-radius: 100px;
+}
+.box-d{
+    text-align: center;
+    background-color: lightgray;
+    width: 350px;
+    height: 200px;
+    line-height: 200px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    /* %values in this section are better as they do not need 
+    u to perform arithmatics and even it is better for responsive
+    web design(using px values is also allowed)*/
+}
+/*Rounded Box border ends*/
+/*Transform starts*/
+img{
+    height: 200px;
+    width: 200px;
+}
+/*Rotate*/
+.box-e{
+    height: 300px;
+    width: 350px;
+    margin: 50px 100px;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: rotate(90deg);
+    /*The content will be rotated clockwise*/
+}
+/*Rotate*/
+/*Scale*/
+.box-f{
+    height: 300px;
+    width: 350px;
+    margin: 100px 100px;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: scale(1.5);
+    /*One is the normal size anything below it will minimize the 
+    content and vice-versa*/
+}
+/*Scale*/
+/*Skew*/
+.box-g{
+    height: 300px;
+    width: 350px;
+    margin: 50px 100px;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: skewX(15deg) skewY(-10deg);
+    /*Skew is used to tilt the content X is used to tilt 
+    horizontally while Y is used to tilt vertically.Minus sign
+    tilts in opposite direction.You can use both skew individually 
+    or even together if u wish to tilt the content both ways.*/
+}
+/*Skew*/
+/*Position*/
+.box-h{
+    height: 300px;
+    width: 350px;
+    margin: 50px 100px;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(20px) translateX(100px);
+    /*U can pass two value using only the translate function
+    in which first value is to move that much horizontally(X)
+    while second value is to move that much vertically(y)*/
+}
+/*Position*/
+/*V acn use all the big four properties in a single element of
+transform but only the properties shall be separated by a space.
+All the properties will have their respective effects in this
+case like they have when written individually*/
+/*Transform ends*/
+/*Transition starts*/
+/*Example 1*/
+.box-i,
+.box-j{
+    margin: 50px 80px;
+}
+.box-i a{
+    border: solid 3px darkgray;
+    background-color: orange;
+    color: darkcyan;
+    text-align: center;
+    padding: 20px;
+}
+.box-i a:hover{
+    background-color: darkcyan;
+    color: orange;
+}
+.box-j a{    
+    border: solid 3px darkgray;
+    background-color: orange;
+    color: darkcyan;
+    text-align: center;
+    padding: 20px 27.5px;
+    transition-property: background-color, color;
+    /*u can use the all keyword if u want to gtransition all the 
+    properties.*/
+    transition-duration: 2s;
+}
+.box-j a:hover{
+    background-color: darkcyan;
+    color: orange;
+}
+/*Example 1*/
+/*Example 2*/
+.box-k{
+    position: relative;
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+}
+.box-k img{
+    width: 700px;
+    height: 500px;
+    transition: all 2s;
+}
+.box-k:hover img{
+    transform: scale(1.5);
+}
+.box-l{
+    position: absolute;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    color: white;
+    width: 700px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .50);
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 1s;
+    transform: translateY(100%);
+}
+.box-k:hover .box-l{
+    transform: translateY(0);
+    opacity: 1;
+}
+/*Example 2*/
+/*Example 3*/
+.box-m{
+    text-align: center;
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    margin: 40px;
+    border-radius: 50%;
+    transition: all 3s ease-in-out;
+    /*transition-timing-function controls the acceleration 
+    and de-acceleration of the motion of 
+    transition using the keywords ease-in,ease-ou,ease-in-out.
+    By default its value is ease.*/
+}
+.box-m:hover{
+    transform: rotate(360deg);
+}
+/*Example 1*/
+/*Transition ends*/
